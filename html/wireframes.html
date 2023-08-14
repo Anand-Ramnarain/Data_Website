@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wireframes</title>
     <link rel="stylesheet" href="../CSS/blog.css" />
+    <link rel="stylesheet" href="../CSS/slideshow.css" />
   </head>
   <body>
     <header class="nav container" id="navbar-placeholder"></header>
@@ -19,34 +20,45 @@
     </main>
 
     <article class="post-content post-container">
-      <h2 class="sub-heading">subheader</h2>
+      <h2 class="sub-heading">Wireframes</h2>
       <p class="post-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-        distinctio quaerat vel accusamus, soluta cumque veniam laboriosam
-        mollitia, explicabo sint itaque alias harum aspernatur. Eaque nisi omnis
-        dicta aperiam ex?
+        This is a slideshow, showcasing my wireframe. In this, the user can see
+        the rough draw wireframes to how it became a blackout frame. This was
+        important as it allowed me to have a visual blueprint of how I was going
+        to start my website. It helped me to evaluate each element which I
+        wanted to include whiles making sure it served a purpose on my website.
+        Planning out the wireframes allow me to remove some doubt I had on what
+        I wanted to include and achieve. In the wireframes, there is an orange
+        circle on the frames, this is to represent a clickable object that will
+        that the user to the top of the page.
       </p>
-      <p class="post-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aspernatur
-        optio doloribus quis repellat soluta ipsam delectus sint quas quidem
-        quam perferendis, architecto similique minus libero, magni qui iusto
-        facere!
-      </p>
-      <p class="post-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aspernatur
-        optio doloribus quis repellat soluta ipsam delectus sint quas quidem
-        quam perferendis, architecto similique minus libero, magni qui iusto
-        facere!
-      </p>
-      <p class="post-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aspernatur
-        optio doloribus quis repellat soluta ipsam delectus sint quas quidem
-        quam perferendis, architecto similique minus libero, magni qui iusto
-        facere!
-      </p>
+      <section class="slidershow-container">
+        <section class="slide fade header-img">
+          <img src="../Images/DrawnHome.jpg" alt="" />
+        </section>
+        <section class="slide fade header-img">
+          <img src="../Images/Homepage.png" alt="" />
+        </section>
+        <section class="slide fade header-img">
+          <img src="../Images/drawnpost.jpg" alt="" />
+        </section>
+        <section class="slide fade header-img">
+          <img src="../Images/Postpage.png" alt="" />
+        </section>
+        <section class="slide fade header-img">
+          <img src="../Images/DrawnSelection.jpg" alt="" />
+        </section>
+        <section class="slide fade header-img">
+          <img src="../Images/Selection.png" alt="" />
+        </section>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </section>
     </article>
     <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
   </body>
+  <script src="../JavaScript/slideshow.js"></script>
   <script src="../JavaScript/script.js"></script>
   <script src="../JavaScript/nav.js"></script>
+  <script src="../JavaScript/slide.js"></script>
 </html>
