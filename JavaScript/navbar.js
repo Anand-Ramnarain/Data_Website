@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navbar.appendChild(ulElement);
 
-    anchor.addEventListener("click", function (e) {
+    anchor.addEventListener("onclick", function(){
       setActive(anchor);
     });
   }
