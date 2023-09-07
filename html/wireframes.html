@@ -9,16 +9,27 @@
     <title>Wireframes</title>
     <link rel="stylesheet" href="../CSS/blog.css" />
     <link rel="stylesheet" href="../CSS/slideshow.css" />
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
   </head>
   <body>
-    <header class="nav container" id="navbar-placeholder"></header>
+    <header id="head">
+      <nav id="navbar"></nav>
+    </header>
     <main class="post-header">
       <section class="header-content post-container">
         <a href="../html/design-main.html" class="back-home">Back</a>
 
         <h1 class="header-title">Wireframes</h1>
 
-        <img src="../Images/wire.jpg" alt="Cover Image. It is not important" class="header-img" />
+        <img
+          src="../Images/wire.jpg"
+          alt="Cover Image. It is not important"
+          class="header-img"
+        />
       </section>
     </main>
 
@@ -40,19 +51,31 @@
           <img src="../Images/DrawnHome.jpg" alt="Drawn version of homepage" />
         </section>
         <section class="slide fade header-img">
-          <img src="../Images/Homepage.png" alt="Blockout version of wireframe" />
+          <img
+            src="../Images/Homepage.png"
+            alt="Blockout version of wireframe"
+          />
         </section>
         <section class="slide fade header-img">
           <img src="../Images/drawnpost.jpg" alt="Drawn version of Postpage" />
         </section>
         <section class="slide fade header-img">
-          <img src="../Images/Postpage.png" alt="Blockout version of Postpage" />
+          <img
+            src="../Images/Postpage.png"
+            alt="Blockout version of Postpage"
+          />
         </section>
         <section class="slide fade header-img">
-          <img src="../Images/DrawnSelection.jpg" alt="Drawn version of selectionpage" />
+          <img
+            src="../Images/DrawnSelection.jpg"
+            alt="Drawn version of selectionpage"
+          />
         </section>
         <section class="slide fade header-img">
-          <img src="../Images/Selection.png" alt="Blockout version of selectionpage" />
+          <img
+            src="../Images/Selection.png"
+            alt="Blockout version of selectionpage"
+          />
         </section>
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
@@ -60,8 +83,8 @@
     </article>
     <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
   </body>
+  <script src="../JavaScript/navbar.js"></script>
   <script src="../JavaScript/slideshow.js"></script>
   <script src="../JavaScript/script.js"></script>
-  <script src="../JavaScript/nav.js"></script>
   <script src="../JavaScript/slide.js"></script>
 </html>
