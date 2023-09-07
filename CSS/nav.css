@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Playfair:opsz@5..1200&family=Poppins:ital,wght@0,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Playfair:opsz@5..1200&family=Poppins:ital,wght@0,300;1,400&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +8,6 @@
   text-decoration: none;
   scroll-behavior: smooth;
   scroll-padding-top: 3rem;
-
 }
 
 :root {
@@ -183,27 +182,31 @@ header.sticky {
   }
 }
 
-footer {
-    background: var(--other-colour);
-    height: 100%;
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0.5rem 5%;
-  }
-  
-  .footer-text p {
-    font-size: var(--p-font);
-  }
-  
-  footer p,
-  footer p a {
-    display: inline-block;
-    padding-inline-end: 50px;
-  }
-  
-  footer p a {
-    color: var(--main-colour);
-  }
+#footer {
+  background: var(--other-colour);
+  height: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 5%;
+}
+
+.footer-text p {
+  font-size: var(--p-font);
+  color: var(--text-colour);
+}
+
+#footer p,
+#footer p a {
+  padding-inline-end: 50px;
+}
+
+#footer p a {
+  color: var(--main-colour);
+}
+
+.foot {
+  color: var(--text-colour);
+}

@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     navbar.appendChild(ulElement);
 
     anchor.addEventListener("click", function (e) {
-      e.preventDefault(); // You might not need this if you want the links to actually navigate
       setActive(anchor);
     });
   }
