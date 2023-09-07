@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.getElementById("head");
   const headItem = [
-    { icon: "bx bxs-home", text: "DataWebsite", href: "#", class: "logo" },
+    { icon: "bx bxs-home", text: "DataWebsite", href: "https://anand-ramnarain.github.io/Data_Website/index.html", class: "logo" },
   ];
 
   const navbar = document.getElementById("navbar");
   const navItems = [
-    { text: "Home", href: "#home" },
-    { text: "About", href: "#about" },
-    { text: "Design", href: "#design" },
-    { text: "Data-Visualisation", href: "#visualisation" },
-    { text: "Data-Art", href: "#art" },
+    { text: "Home", href: "https://anand-ramnarain.github.io/Data_Website/index.html" },
+    { text: "Blogs", href: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html" },
+    { text: "Design", href: "https://anand-ramnarain.github.io/Data_Website/html/design-main.html" },
+    { text: "Data-Visualisation", href: "https://anand-ramnarain.github.io/Data_Website/html/data-visual.html" },
+    { text: "Data-Art", href: "https://anand-ramnarain.github.io/Data_Website/html/data-art.html" },
   ];
 
   const ulElement = document.createElement("ul");
