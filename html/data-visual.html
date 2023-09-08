@@ -7,8 +7,8 @@
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Anand Ramnarain" />
     <title>Data Visualisation</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link rel="stylesheet" href="../CSS/visual.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
@@ -18,9 +18,48 @@
     <header id="head">
       <nav id="navbar"></nav>
     </header>
+
+    <main>
+      <section class="flare-graphs">
+        <section class="center-container">
+          <section id="chart-container"></section>
+        </section>
+
+        <section class="piechart">
+          <h1>Breakdown of Solar Flares Types</h1>
+          <section id="pieChartContainer">
+            <label for="year">Year:</label>
+            <select id="year">
+              <option value="2022" selected>2022</option>
+            </select>
+
+            <label for="month">Month:</label>
+            <select id="month">
+              <option value="1" selected>January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+
+            <button onclick="fetchAndRenderData()">Show Data</button>
+          </section>
+        </section>
+      </section>
+    </main>
     <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
     <footer id="footer"></footer>
   </body>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="../JavaScript/navbar.js"></script>
   <script src="../JavaScript/footer.js"></script>
+  <script src="../JavaScript/flares.js"></script>
 </html>

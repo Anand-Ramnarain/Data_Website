@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Visualisation</title>
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link rel="stylesheet" href="../CSS/visual.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header id="head">
+      <nav id="navbar"></nav>
+    </header>
+
+    <main>
+      <section class="astroid-graph">
+        <h1>Astroid Graph</h1>
+        <section class="Astroids-graph">
+          <section class="number">
+            <form id="dateForm">
+              Start Date: <input type="date" id="startDate" />
+              <input type="submit" value="Fetch Data" />
+            </form>
+
+            <section class="graph-container">
+              <svg id="neoGraph" width="800" height="600"></svg>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
+    <footer id="footer"></footer>
+  </body>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="../JavaScript/navbar.js"></script>
+  <script src="../JavaScript/footer.js"></script>
+  <script src="../JavaScript/astroid.js"></script>
+</html>
