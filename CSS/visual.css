@@ -1,8 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Playfair:opsz@5..1200&family=Poppins:ital,wght@0,300;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+:root {
+  --main-colour: #ff9f0d;
+  --text-colour: #fff;
+  --other-colour: #212121;
+  --second-colour: #9e9e9e;
+  --bg-colour: #111111;
+
+  --big-font: 4.5rem;
+  --h-font: 2.6rem;
+  --p-font: 1.1rem;
+}
+
+body {
+  background: var(--bg-colour);
+  color: var(--text-colour);
+}
+
 .center-container {
-  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* stack children vertically */
+  align-items: center; /* center children horizontally */
+  gap: 30px; /* space between child elements, you can adjust as needed */
+  margin-top: 7%;
 }
 
 .label {
@@ -12,8 +42,76 @@
 
 .graph-container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#chart-container rect {
+  fill: gray;
+  transition: fill 0.3s ease;
+}
+
+.juneBar {
+  fill: green !important;
+}
+
+.decBar {
+  fill: red !important;
+}
+
+#chart-container rect:hover {
+  fill: var(--main-colour);
+}
+
+.hidden {
+  display: none;
+}
+
+#tooltip {
+  position: absolute;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  pointer-events: none;
+  font-size: 14px;
+  color: black;
+}
+
+#chart-container text {
+  color: var(--text-colour);
+}
+
+.label {
+  fill: var(--text-colour);
+}
+
+#graph-header {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.piechart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#pieChartContainer{
+  margin: 20px 20px;
+}
+
+
+.piechart label, 
+.piechart select, 
+.piechart button {
+  margin: 5px;
 }
 

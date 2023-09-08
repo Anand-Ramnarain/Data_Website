@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { text: "Home", href: "https://anand-ramnarain.github.io/Data_Website/index.html" },
     { text: "Blogs", href: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html" },
     { text: "Design", href: "https://anand-ramnarain.github.io/Data_Website/html/design-main.html" },
-    { text: "Data-Visualisation", href: "https://anand-ramnarain.github.io/Data_Website/html/data-visual.html" },
+    { text: "Data-Visualisation", href: "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html" },
     { text: "Data-Art", href: "https://anand-ramnarain.github.io/Data_Website/html/data-art.html" },
   ];
 

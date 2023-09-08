@@ -22,12 +22,14 @@
     <main>
       <section class="flare-graphs">
         <section class="center-container">
+          <h1 id="graph-header">Number Of Solar Flares For 2022</h1>
           <section id="chart-container"></section>
+          <section id="tooltip" class="hidden"></section>
         </section>
 
         <section class="piechart">
-          <h1>Breakdown of Solar Flares Types</h1>
-          <section id="pieChartContainer">
+          <h1 id="graph-header">Breakdown of Solar Flares Types</h1>
+          <section>
             <label for="year">Year:</label>
             <select id="year">
               <option value="2022" selected>2022</option>
@@ -50,6 +52,7 @@
             </select>
 
             <button onclick="fetchAndRenderData()">Show Data</button>
+            <section id="pieChartContainer"></section>
           </section>
         </section>
       </section>
@@ -58,7 +61,7 @@
     <footer id="footer"></footer>
   </body>
   <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
   <script src="../JavaScript/navbar.js"></script>
   <script src="../JavaScript/footer.js"></script>
   <script src="../JavaScript/flares.js"></script>

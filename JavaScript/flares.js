@@ -50,7 +50,9 @@ async function getFlareCountsForMonths(year, startMonth, endMonth) {
     });
   }
   return counts;
+  
 }
+
 
 async function renderGraph(year, startMonth, endMonth) {
   const flareCounts = await getFlareCountsForMonths(year, startMonth, endMonth);
@@ -74,9 +76,8 @@ async function renderGraph(year, startMonth, endMonth) {
   x.domain(flareCounts.map((d) => d.month));
   y.domain([0, d3.max(flareCounts, (d) => d.count)]).nice();
 
-  svg
+  const bars = svg
     .append("g")
-    .attr("fill", "steelblue")
     .selectAll("rect")
     .data(flareCounts)
     .enter()
@@ -84,7 +85,12 @@ async function renderGraph(year, startMonth, endMonth) {
     .attr("x", (d) => x(d.month))
     .attr("y", (d) => y(d.count))
     .attr("height", (d) => y(0) - y(d.count))
-    .attr("width", x.bandwidth());
+    .attr("width", x.bandwidth())
+    .attr("class", (d) =>{
+      if(d.month === "June 2022") return "juneBar";
+      if(d.month === "December 2022") return "decBar";
+    })
+
 
   svg
     .append("g")
@@ -103,6 +109,7 @@ async function renderGraph(year, startMonth, endMonth) {
 
   svg
     .append("text")
+    .attr("class", "label")
     .attr("transform", "rotate(-90)")
     .attr("y", 0)
     .attr("x", 0 - height / 2)
@@ -112,23 +119,49 @@ async function renderGraph(year, startMonth, endMonth) {
 
   svg
     .append("text")
+    .attr("class", "label")
     .attr("transform", `translate(${width / 2} ,${height - 11})`)
     .style("text-anchor", "middle")
     .text("Month and Year");
+
+    bars.on("mouseover",null);
+    bars
+    .on("mouseover", function (event, d) {
+      console.log("Logged data",d);
+      console.log("Full data from this:", d3.select(this).datum());
+
+      d3.select("#tooltip")
+        .style("left", event.pageX + 10 + "px") 
+        .style("top", event.pageY - 10 + "px") 
+        .html(`Number of Solar Flares in ${d.month}: ${d.count}`)
+        .classed("hidden", false); 
+    })
+    .on("mousemove", function (event, d) {
+      
+      d3.select("#tooltip")
+        .style("left", event.pageX + 10 + "px")
+        .style("top", event.pageY - 10 + "px");
+    })
+    .on("mouseout", function () {
+   
+      d3.select("#tooltip").classed("hidden", true);
+    });
 }
 
 const url =
-  "https://api.nasa.gov/DONKI/FLR?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&api_key="+apiKey;
+  "https://api.nasa.gov/DONKI/FLR?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&api_key=" +
+  apiKey;
 
 function getDONKIUrlForMonth(year, month) {
-  const startDate = new Date(year, month - 1, 1); 
+  const startDate = new Date(year, month - 1, 1);
   const endDate = new Date(year, month, 0);
 
   const formattedStartDate = startDate.toISOString().split("T")[0];
   const formattedEndDate = endDate.toISOString().split("T")[0];
 
   return (
-    `https://api.nasa.gov/DONKI/FLR?startDate=${formattedStartDate}&endDate=${formattedEndDate}&api_key=`+apiKey
+    `https://api.nasa.gov/DONKI/FLR?startDate=${formattedStartDate}&endDate=${formattedEndDate}&api_key=` +
+    apiKey
   );
 }
 
