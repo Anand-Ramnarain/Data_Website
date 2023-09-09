@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Visualisation</title>
     <link rel="stylesheet" href="../CSS/nav.css" />
+    <link rel="stylesheet" href="../CSS/blog.css">
     <link rel="stylesheet" href="../CSS/visual.css" />
     <link
       rel="stylesheet"
@@ -16,10 +17,24 @@
       <nav id="navbar"></nav>
     </header>
 
+    <main class="post-header block">
+      <section class="header-content post-container">
+        <a href="../html/data-visual-main.html" class="back-home">Back</a>
+
+        <h1 class="header-title">Data Visualisation: Astroids</h1>
+
+        <img
+          src="../Images/testerimage.png"
+          alt="Cover Image. It is not important"
+          class="header-img"
+        />
+      </section>
+    </main>
+
     <main>
       <section class="astroid-graph">
-        <h1>Astroid Graph</h1>
         <section class="Astroids-graph">
+          <h1 id="graph-header">A Line Graph showing The Number Of Close-Approaching Asteroids Over A Range Of 7 Days</h1>
           <section class="number">
             <form id="dateForm">
               Start Date: <input type="date" id="startDate" />

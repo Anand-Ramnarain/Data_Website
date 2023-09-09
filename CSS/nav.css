@@ -210,3 +210,7 @@ header.sticky {
 .foot {
   color: var(--text-colour);
 }
+
+.navlist.open {
+  display: block;
+}

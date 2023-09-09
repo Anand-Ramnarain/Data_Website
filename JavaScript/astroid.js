@@ -24,8 +24,7 @@ function addDays(date, days) {
 }
 
 function fetchData(startDate, endDate) {
-  const API_URL =
-    `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=`+API_KEY;
+  const API_URL =`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=`+API_KEY;
 
   fetch(API_URL)
     .then((response) => response.json())

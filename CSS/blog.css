@@ -190,6 +190,7 @@ header.shadow .logo{
     color: var(--second-colours);
     font-size: 0.9rem;
     font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
 }
 
 .header-title{
