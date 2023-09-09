@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Visualisation</title>
-    <link rel="stylesheet" href="../CSS/nav.css" />
-    <link rel="stylesheet" href="../CSS/blog.css">
     <link rel="stylesheet" href="../CSS/visual.css" />
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link rel="stylesheet" href="../CSS/blog.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
@@ -24,24 +24,28 @@
         <h1 class="header-title">Data Visualisation: Astroids</h1>
 
         <img
-          src="../Images/testerimage.png"
-          alt="Cover Image. It is not important"
-          class="header-img"
+          id="nasaImage1"
+          class="nasaImage"
+          data-search-term="Meteor shower"
+          alt="Random NASA Image"
         />
       </section>
     </main>
 
     <main>
-      <section class="astroid-graph">
+      <section class="astroid-graph graph-container">
         <section class="Astroids-graph">
-          <h1 id="graph-header">A Line Graph showing The Number Of Close-Approaching Asteroids Over A Range Of 7 Days</h1>
+          <h1 id="graph-header">
+            A Line Graph showing The Number Of Close-Approaching Asteroids Over
+            A Range Of 7 Days
+          </h1>
           <section class="number">
             <form id="dateForm">
               Start Date: <input type="date" id="startDate" />
               <input type="submit" value="Fetch Data" />
             </form>
 
-            <section class="graph-container">
+            <section>
               <svg id="neoGraph" width="800" height="600"></svg>
             </section>
           </section>
@@ -53,8 +57,8 @@
     <footer id="footer"></footer>
   </body>
   <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="../JavaScript/navbar.js"></script>
   <script src="../JavaScript/footer.js"></script>
   <script src="../JavaScript/astroid.js"></script>
+  <script src="../JavaScript/randomImage.js"></script>
 </html>

@@ -337,3 +337,28 @@ header.shadow .logo{
     height: auto;
     width: 40%;
 }
+
+#post-pic{
+    height: auto;
+    width: auto;
+}
+
+.nasaImage {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    object-position: center;
+}
+
+.designImg{
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    object-position: center;
+}

@@ -55,7 +55,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} 
 
 #chart-container rect {
   fill: gray;
@@ -132,3 +132,30 @@ body {
   margin-top: 7%;
 }
 
+.number{
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 100px;  /* Adjust width as needed */
+  height: auto;
+  padding: 5px;
+  font: 12px sans-serif;
+  background: rgb(116, 158, 213);
+  border: none;
+  border-radius: 5px;
+  pointer-events: none;  /* Ensures the tooltip doesn't interfere with mouse events */
+  opacity: 0;  /* Starts off hidden */
+}
+
+.dot:hover{
+  fill: var(--main-colour);
+}
+
+.linePath{
+  stroke: steelblue ;
+}

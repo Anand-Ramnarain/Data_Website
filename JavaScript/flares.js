@@ -57,9 +57,9 @@ async function getFlareCountsForMonths(year, startMonth, endMonth) {
 async function renderGraph(year, startMonth, endMonth) {
   const flareCounts = await getFlareCountsForMonths(year, startMonth, endMonth);
 
-  const width = 500;
-  const height = 500;
-  const margin = { top: 20, right: 20, bottom: 90, left: 60 };
+  const width = 600;
+  const height = 600;
+  const margin = { top: 20, right: 20, bottom: 95, left: 60 };
 
   const x = d3
     .scaleBand()

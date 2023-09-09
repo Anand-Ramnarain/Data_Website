@@ -66,6 +66,9 @@ function fetchData(startDate, endDate) {
       // Clear the SVG before appending new data (especially useful when new data is fetched)
       svg.selectAll("*").remove();
 
+      const maxCount = d3.max(asteroids, d => d.count);
+      const minCount = d3.min(asteroids, d => d.count);
+
       const g = svg
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -73,7 +76,7 @@ function fetchData(startDate, endDate) {
       g.append("path")
         .datum(asteroids)
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
+        .attr("class", "linePath")
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round")
         .attr("stroke-width", 1.5)
@@ -86,8 +89,7 @@ function fetchData(startDate, endDate) {
         .attr("class", "tooltip")
         .style("opacity", 0);
 
-      // Plot the dots for each data point
-      g.selectAll(".dot")
+        g.selectAll(".dot")
         .data(asteroids)
         .enter()
         .append("circle")
@@ -95,36 +97,49 @@ function fetchData(startDate, endDate) {
         .attr("cx", (d) => xScale(d.date))
         .attr("cy", (d) => yScale(d.count))
         .attr("r", 3.5)
-        .attr("fill", "steelblue")
-        .on("mouseover", function (event, d) {
-          tooltip.transition().duration(200).style("opacity", 0.9);
-          tooltip
-            .html("Date: " + d.date + "<br/>Asteroids: " + d.count)
-            .style("left", event.pageX + 5 + "px")
-            .style("top", event.pageY - 28 + "px");
+        .attr("fill", function(d) {
+            if (d.count === maxCount) {
+                return "red";  // Color for the highest dot
+            } else if (d.count === minCount) {
+                return "lawngreen"; // Color for the lowest dot
+            } else {
+                return "steelblue"; // Default color for all other dots
+            }
         })
-        .on("mouseout", function (d) {
-          tooltip.transition().duration(500).style("opacity", 0);
+        .on("mouseover", function(event, d) {
+            d3.select(this)
+                .attr("r", 5);  // Increase the dot radius on hover
+
+            tooltip.transition().duration(200).style("opacity", 0.9);
+            tooltip.html("Date: " + d.date + "<br/>Asteroids: " + d.count)
+                .style("left", event.pageX + 5 + "px")
+                .style("top", event.pageY - 28 + "px");
+        })
+        .on("mouseout", function(d) {
+            d3.select(this)
+                .attr("r", 3.5);  // Reset the dot radius
+
+            tooltip.transition().duration(500).style("opacity", 0);
         });
 
-      g.append("g")
+    g.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
-      g.append("text")
+    g.append("text")
         .attr("class", "label")
-        .attr("x", width / 2) // Position it at the end of the axis
-        .attr("y", height + 50) // A bit below the axis
+        .attr("x", width / 2)
+        .attr("y", height + 50)
         .style("text-anchor", "middle")
         .text("Date");
 
-      g.append("g").call(yAxis);
-      g.append("text")
+    g.append("g").call(yAxis);
+    g.append("text")
         .attr("class", "label")
-        .attr("transform", "rotate(-90)") // Rotate the text to make it vertical
-        .attr("y", -50) // A bit to the left of the axis
-        .attr("x", 0 - height / 2) // Center it vertically relative to the axis
-        .attr("dy", "1em") // Slight adjustment for positioning
+        .attr("transform", "rotate(-90)")
+        .attr("y", -50)
+        .attr("x", 0 - height / 2)
+        .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text("Number of Asteroids");
-    });
+});
 }
