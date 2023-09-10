@@ -28,7 +28,6 @@ async function fetchRandomNasaImage(imgElement) {
   }
 }
 
-// Fetch images for both elements
 const imgElement1 = document.getElementById("nasaImage1");
 const imgElement2 = document.getElementById("nasaImage2");
 

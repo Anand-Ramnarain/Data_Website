@@ -4,15 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("dateForm")
     .addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent the form from doing a full page submit
+      event.preventDefault(); 
 
       const startDate = document.getElementById("startDate").value;
-      const endDate = addDays(startDate, 7); // Fetching data for the next 7 days from the selected date
+      const endDate = addDays(startDate, 7); 
 
       fetchData(startDate, endDate);
     });
 
-  // Optional: Load data for an initial/default date when the page first loads:
+
   const defaultStartDate = new Date().toISOString().split("T")[0];
   fetchData(defaultStartDate, addDays(defaultStartDate, 7));
 });
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function addDays(date, days) {
   const result = new Date(date);
   result.setDate(result.getDate() + days);
-  return result.toISOString().split("T")[0]; // Return date in 'YYYY-MM-DD' format
+  return result.toISOString().split("T")[0]; 
 }
 
 function fetchData(startDate, endDate) {
@@ -38,14 +38,14 @@ function fetchData(startDate, endDate) {
         });
       }
 
-      asteroids.sort((a, b) => a.date - b.date); // Ensure data is sorted by date
+      asteroids.sort((a, b) => a.date - b.date); 
 
       const svg = d3.select("#neoGraph");
       const margin = { top: 50, right: 50, bottom: 80, left: 80 };
       const width = +svg.attr("width") - margin.left - margin.right;
       const height = +svg.attr("height") - margin.top - margin.bottom;
 
-      // Define scales, axes, and line for the D3 plot
+    
       const xScale = d3
         .scaleTime()
         .domain(d3.extent(asteroids, (d) => d.date))
@@ -63,7 +63,6 @@ function fetchData(startDate, endDate) {
         .x((d) => xScale(d.date))
         .y((d) => yScale(d.count));
 
-      // Clear the SVG before appending new data (especially useful when new data is fetched)
       svg.selectAll("*").remove();
 
       const maxCount = d3.max(asteroids, d => d.count);
@@ -99,16 +98,16 @@ function fetchData(startDate, endDate) {
         .attr("r", 3.5)
         .attr("fill", function(d) {
             if (d.count === maxCount) {
-                return "red";  // Color for the highest dot
+                return "red"; 
             } else if (d.count === minCount) {
-                return "lawngreen"; // Color for the lowest dot
+                return "lawngreen"; 
             } else {
-                return "steelblue"; // Default color for all other dots
+                return "steelblue"; 
             }
         })
         .on("mouseover", function(event, d) {
             d3.select(this)
-                .attr("r", 5);  // Increase the dot radius on hover
+                .attr("r", 5);  
 
             tooltip.transition().duration(200).style("opacity", 0.9);
             tooltip.html("Date: " + d.date + "<br/>Asteroids: " + d.count)
@@ -117,7 +116,7 @@ function fetchData(startDate, endDate) {
         })
         .on("mouseout", function(d) {
             d3.select(this)
-                .attr("r", 3.5);  // Reset the dot radius
+                .attr("r", 3.5);  
 
             tooltip.transition().duration(500).style("opacity", 0);
         });

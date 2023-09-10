@@ -20,13 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
   textElement.textContent = "Data Website: ";
 
   footItems.forEach((data) => {
-    // Create the description text element
+  
     const spanElement = document.createElement("span");
     spanElement.classList.add("foot");
     spanElement.textContent = data.text;
     textElement.appendChild(spanElement);
 
-    // Create the link element
     const anchors = document.createElement("a");
     anchors.setAttribute("href", data.href);
     anchors.setAttribute("target", "_blank");
