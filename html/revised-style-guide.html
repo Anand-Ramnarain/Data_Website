@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive Media Style Guide Colour font Layout post"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Anand Ramnarain" />
+    <title>Revised Style Guide</title>
+    <link rel="stylesheet" href="../CSS/blog.css" />
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header id="head">
+      <nav id="navbar"></nav>
+    </header>
+    <main class="post-header">
+      <section class="header-content post-container">
+        <a href="../html/design-main.html" class="back-home">Back</a>
+
+        <h1 class="header-title">Revised Style Guide</h1>
+
+        <img
+          src="../Images/design-style-guide.png"
+          alt="Cover Image. It is not important"
+          class="header-img"
+        />
+      </section>
+    </main>
+
+    <article class="post-content post-container">
+      <p class="post-text">
+        I have decided to keep the design and style of my website very similar
+        to my prototype. Even though I only released that there is a space theme
+        that goes towards this website with the use of the NASA API. My website
+        style still can use this space theme. This is because the negative space
+        is black representing the emptiness in space. Since I am using the
+        colour orange and it is not used in large amounts, it has a
+        representation towards the sun as just like how important the sun is,
+        the orange colour in my website is used to highlight and emphasize
+        aspects of my website. The use of keeping my colour selection ensures
+        brand consistency. The chosen colours provide contrast, ensure
+        readability, and impart a modern, sleek feel.
+      </p>
+      <h2 class="sub-heading">Homepage:</h2>
+      <p class="post-text">
+        Header: The header is fixed with a transparent background that turns
+        solid black colour when scrolled. The logo size adjusts to the size of
+        the navbar by always remaining constant on the screen. The use of the
+        fixed headers offers constant navigation, improving user experience. The
+        transition effect adds dynamism to the design.
+      </p>
+      <p class="post-text">
+        Navigation: The navbar is a part of horizontal navigation links for
+        larger screens, which is also collapsible for smaller screens, and there
+        are also active navigation links highlighted with the main colour
+        (orange). It allows for responsive navigation ensures accessibility
+        across devices, and the highlight provides a visual cue for users.
+      </p>
+      <p class="post-text">
+        Main Content Area: The main content area uses a grid system to display
+        content. The content sections use cards with rounded corners, images,
+        and descriptive text. This is because the grid systems provide
+        organization and scalability. Card designs compartmentalize information,
+        making it easier to understand.
+      </p>
+      <p class="post-text">
+        Buttons: All the buttons have a consistent styling with a rounded edge,
+        the primary action buttons are styled with a coloured background and
+        transition effects. As in doing this, the button styles make the site
+        intuitive. Transition effects provide feedback, enhancing user
+        experience.
+      </p>
+      <h2 class="sub-heading">Selection Pages:</h2>
+      <p class="post-text">
+        All my selection pages follow a certain structure, which allows for a
+        responsive website that showcases blogs, posts, and related to "Data
+        Visualisation". The primary visual elements are images fetched from
+        NASA's API. The header and footer are dynamically generated using
+        JavaScript, making it easy to maintain and modify. My website's design
+        is made responsive using media queries in CSS.
+      </p>
+      <h2 class="sub-heading">HTML Structure:</h2>
+      <p class="post-text">
+        The Header Contains a fixed navigation bar, The structure of the navbar
+        is empty but it does get populated using JavaScript.
+      </p>
+      <p class="post-text">
+        Main Content: The first section is dedicated to the heading for the
+        section, Data Visualisation, Blogs, and Design with a subtitle giving a
+        short explanation of the heading or what is in the section. There are
+        also two sub-sections or posts under the title, each containing: <br />
+        - An image from NASA, which seems to be set dynamically using JavaScript
+        based on data attributes, or static images set through HTML using a
+        PNG/jpeg. <br />- A title which also acts as a link. <br />
+        - A description.
+      </p>
+      <p class="post-text">Footer: Which is populated through JS.</p>
+      <h2 class="sub-heading">Style:</h2>
+      <p class="post-text">
+        The typography of the website is: <br />
+        - Primary Font: 'Playfair Display', serif <br />
+        - Secondary Font: 'Poppins', sans-serif <br />
+        - Font Weight: Ranges from regular (400) to semi-bold (600). <br />
+        - Font Sizes: Uses responsive design with sizes defined in `rem` to
+        adjust relative to the root font size. This ensures that typography
+        scales uniformly across devices. This allows for consistent theming as
+        the use of fonts, colours, and styles across the website offers a
+        cohesive user experience.
+      </p>
+      <p class="post-text">
+        Layout: The main content centres on the title and subtitle. It uses a
+        grid layout for the posts, which adjusts based on viewport size. The
+        Post Structure includes an image, title, and description. The title is
+        limited to two lines using `-webkit-line-clamp`. The spacing between
+        letters and lines is consistent usage of padding and margins to ensure
+        elements have room to "breathe" so that the content is readable and
+        legible.
+      </p>
+      <p class="post-text">
+        Interactive Elements: The buttons & links in the website use a
+        transition for colour changes, creating a smooth visual effect on hover.
+        There is also a scroll behaviour allowing for smooth scrolling, which
+        enhances the user experience by providing gradual navigation when
+        jumping between sections.
+      </p>
+      <p class="post-text">
+        Images: The images for design in css for adaptive sizing so that they
+        can resize and adjust to their layout according to the viewport size.
+        The images are positioned to use `object-fit`, which will ensure images
+        cover their container without distortion.
+      </p>
+      <h2 class="sub-heading">Reasoning for UI/UX:</h2>
+      <p class="post-text">
+        There is a responsive design, through the use of media queries, so the
+        website can adapt to various screen sizes, ensuring it's accessible on
+        both mobile devices and desktops.
+      </p>
+      <p class="post-text">
+        The smooth transitions allow for transitions on buttons and links to
+        have an interaction feeling which is fluid and responsive to user
+        actions.
+      </p>
+      <p class="post-text">
+        The use of dynamic content, as in fetching images from NASA's API
+        dynamically, the website feel fresh and updated, enhancing the user's
+        sense of discovery.
+      </p>
+      <p class="post-text">
+        From a UI perspective, this website appears to look sleek and modern.
+        The usage of contemporary techniques, like smooth scrolling and
+        transitions, combined with dynamic content, ensures it feels fresh and
+        engaging element to the website so the user is actively invested in the
+        website.
+      </p>
+      <p class="post-text">
+        From a UX standpoint, the user's journey is considered and optimized.
+        Fixed navigation, feedback on interaction, and responsive design all
+        contribute to a more seamless and intuitive user experience.
+      </p>
+      <h2 class="sub-heading">The Graphs/Charts</h2>
+      <p class="post-text">
+        Layout & Structure: Using a Centering, Graph container, and Tooltip
+        elements is effective for the layout and structure as it guides the
+        users through content naturally and intuitively while benefiting the
+        users as they can navigate the content effortlessly and access desired
+        information faster. The use of the tooltips provides immediate context
+        or extra details, enhancing user understanding without cluttering the
+        main content.
+      </p>
+      <p class="post-text">
+        Interactive Elements(Bar Colors, Dropdowns, Button): This is effective
+        as the Interactive elements provide feedback and make websites more
+        engaging. As it is easier for users to interact with and understand data
+        or content. Colour-coded bars, for instance, can quickly convey
+        differences or significance in data, while dropdowns offer choices
+        without overwhelming the user.
+      </p>
+      <p class="post-text">
+        Interactivity (Hovering Effects, Dropdowns, Dynamic Data Rendering):
+        This is effective interactivity as it makes a website dynamic and
+        responsive to user actions. So the users receive immediate feedback,
+        which keeps them engaged and makes the experience feel intuitive and
+        alive.
+      </p>
+      <p class="post-text">
+        Visual Feedback (Tooltip, Color Transitions): The use of visual feedback
+        reinforces user interactions, letting them know the system is responding
+        to their actions. So Users feel more in control and confident in their
+        actions on the website, reducing potential confusion.
+      </p>
+      <p class="post-text">
+        Easy Data Access (Dropdowns for Data Selection): Instead of overwhelming
+        the user with loads of data, dropdowns allow them to select specific
+        datasets they're interested in, which allows for a more personalized
+        experience and so the users can access the information they find most
+        relevant, leading to increased satisfaction and engagement.
+      </p>
+    </article>
+    <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
+    <footer id="footer"></footer>
+  </body>
+  <script src="../JavaScript/navbar.js"></script>
+  <script src="../JavaScript/footer.js"></script>
+</html>

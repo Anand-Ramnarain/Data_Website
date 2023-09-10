@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive Media Style Guide Colour font Layout post"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Anand Ramnarain" />
+    <title>Style Guide</title>
+    <link rel="stylesheet" href="../CSS/blog.css" />
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header id="head">
+      <nav id="navbar"></nav>
+    </header>
+    <main class="post-header">
+      <section class="header-content post-container">
+        <a href="../html/design-main.html" class="back-home">Back</a>
+
+        <h1 class="header-title">Planning For Data Visualisation</h1>
+
+        <img
+          src="../Images/datatool.jpg"
+          alt="Cover Image. It is not important"
+          class="header-img"
+        />
+      </section>
+    </main>
+
+    <article class="post-content post-container">
+      <p class="post-text">
+        This document will provide a planning structure and reason for creating
+        three types of static data visualizations using D3.js and NASA API.
+      </p>
+      <h2 class="sub-heading">My Goals:</h2>
+      <p class="post-text">
+        - I want to create visually engaging and informative data visualizations
+        using D3.js. <br />
+        - I will use NASA API to fetch relevant data to create each
+        Visualisation. <br />
+        - Develop interactive features to enhance user experience.
+      </p>
+
+      <h2 class="sub-heading">The Data Visualizations:</h2>
+      <p class="post-text">
+        • Bar graph for Number of solar flares. <br />
+        • Pie chart for categorization of solar flares. <br />
+        • Line graph for close-approaching asteroids.
+      </p>
+
+      <h2 class="sub-heading">NASA API:</h2>
+      <p class="post-text">
+        For the NASA API I must ensure will be able to have API access and make
+        sure that the API will be able to provide the necessary data to create
+        the data Visualisation: <br />
+        • Solar flare data. <br />
+        • Solar flare categorization. <br />
+        • Close approaching asteroids.
+      </p>
+
+      <h2 class="sub-heading">Bar Graph:</h2>
+      <p class="post-text">
+        Data Requirements: Fetch solar flare data for each month of 2022.
+      </p>
+      <p class="post-text">
+        Features: <br />
+        - Display monthly data using grey bars. <br />
+        - Highlight the month with the maximum solar flares in one distinct
+        colour and the month with the least in another. <br />
+        - Show the tooltip on hover to display the exact number of solar flares
+        for that month.
+      </p>
+
+      <h2 class="sub-heading">Pie Chart:</h2>
+      <p class="post-text">
+        Data Requirements: Fetch data for different types of solar flares for a
+        user-selected month.
+      </p>
+      <p class="post-text">
+        Features: <br />
+        - Allow the user to select a month. <br />
+        - Generate pie chart segments for each solar flare type. <br />
+        - Each segment displays a letter for solar flare categorization and its
+        percentage.
+      </p>
+      <h2 class="sub-heading">Line Graph:</h2>
+      <p class="post-text">
+        Data Requirements: Fetch data of close approaching asteroids for 7 days
+        based on a user-selected start date.
+      </p>
+      <p class="post-text">
+        Features: <br />
+        - Plot data points for each day within the 7 days. <br />
+        - Connect data points with a line. <br />
+        - Highlight the highest point in red and the lowest point in green.
+        <br />
+        - Display tooltip with the date, time, and number of close-approaching
+        asteroids on hover.
+      </p>
+      <h2 class="sub-heading">Technical Components:</h2>
+      <p class="post-text">
+        - HTML for structure. <br />
+        - CSS for styling. <br />
+        - D3.js for data visualization. <br />
+        - JavaScript for fetching data and interactions. <br />
+        This planning document provides the structured approach which I used in
+        starting and creating the visualizations using D3.js and the NASA API.
+      </p>
+
+      <h2 class="sub-heading">Why did I choose to do it like this?</h2>
+      <p class="post-text">
+        interactive features: I wanted to include some interactive features
+        (e.g., tooltips on hover) in my graphics as the Interactivity
+        significantly enhances user experience. Using tooltips, allows users to
+        delve deeper into specific data points without overwhelming them with
+        too much information upfront as the user can hover over a particular
+        aspect and get a more details explanation of it.
+      </p>
+      <p class="post-text">
+        Colour Coding: I wanted to use colour coding in the sense of colour
+        differentiation as it aids in quick visual understanding. By making the
+        highest and lowest bars/dots distinct, it will draw attention to
+        significant data points, making the graph more informative at a glance.
+      </p>
+      <p class="post-text">
+        User Control (e.g., month selection for the pie chart, the start date
+        for the line graph): I wanted to include this as it gives the users
+        control over what data they want to see, which makes the visualizations
+        more relevant to each user. It provides a tailored experience and can
+        increase user engagement making a more pleasant and comfortable user
+        experience.
+      </p>
+      <p class="post-text">
+        Use of Different Visualization Types (bar, pie, line): The use of
+        different types of data is best represented in different ways.
+        Categorical data is well-suited to pie charts, while continuous data is
+        better for line graphs. Using a variety of visualization types ensures
+        that each data set is represented in the most effective and
+        comprehensible way.
+      </p>
+      <h2 class="sub-heading">Why these graphs and the story it will tell</h2>
+      <p class="post-text">
+        I want to use each type of graph as it is a plan in which each graph
+        will tell a specific story while providing insights into the data For my
+        first graph, I have chosen a Bar Graph which will show the number of
+        Solar Flares that happened in each month in the year 2022. The reason
+        for this graph is that it provides an overview of solar flare activity
+        throughout the year 2022. The viewer can quickly discern patterns, such
+        as which months had the highest or lowest activity. By highlighting the
+        highest and lowest bars with distinct colours, the graph emphasizes peak
+        and low periods of solar activity.
+      </p>
+      <p class="post-text">
+        Allowing for these Key Takeaways: <br />
+        - Which month had the most solar flares? <br />
+        - Which month had the least? <br />
+        - How does solar flare activity fluctuate throughout the year?
+      </p>
+      <p class="post-text">
+        Pie Chart (Categorization of Solar Flares for a Selected Month): This
+        chart will break down the different types of solar flares that occurred
+        in a specific month. Visualizing the data in pie segments offers
+        insights into the dominance of each flare category. Each segment's size
+        and the accompanying percentage provide context on the flare's frequency
+        and significance.
+      </p>
+      <p class="post-text">
+        Allowing for these Key Takeaways: <br />
+        - What types of solar flares dominated in the selected month? <br />
+        - Which flare types were less common? <br />
+        - How do the various flare types compare proportionally?
+      </p>
+      <p class="post-text">
+        Line Graph (Close Approaching Asteroids over 7 days): This line graph
+        will offer a timeline of close-approaching asteroid activity over a
+        week. It visualizes trends and allows the viewer to understand
+        fluctuations in activity during that time frame. The color-coded highest
+        and lowest points serve to emphasize the peak and minimum threats,
+        respectively.
+      </p>
+      <p class="post-text">
+        Allowing for these Key Takeaways: <br />
+        - On which date was there the highest number of close-approaching
+        asteroids? <br />
+        - On which date was the threat the least? <br />
+        - How does the threat level change day by day over the week?
+      </p>
+      <p class="post-text">
+        In essence, the bar graph offers a macro view of solar flare activity
+        throughout the year, the pie chart provides a detailed breakdown of
+        flare types for a specific month, and the line graph showcases
+        short-term trends in asteroid activity over a week. Each graph tells its
+        own distinct story, providing context, and insights that help the viewer
+        understand the data in meaningful ways.
+      </p>
+      <h2 class="sub-heading">Colour choices</h2>
+      <p class="post-text">
+        I used the colour grey for standard bars in the bar graph. As the grey
+        colour is neutral, that makes it perfect for common data points. Using
+        grey for the majority of bars ensures that they don't visually compete
+        with the bars as I wanted to highlight (highest and lowest in my graph).
+        This way, the coloured bars will stand out more prominently.
+      </p>
+      <p class="post-text">
+        I am using distinctive colours bar the highest and lowest Bars, As these
+        colors for the highest and lowest data points instantly draw the
+        viewer's attention to them. It acts as a visual cue, emphasizing this
+        data point’s significance.
+      </p>
+      <p class="post-text">
+        By using red for the Highest Point in Line Graph I feel it was a good
+        choice as it is often associated with urgency, importance, or even
+        danger. In the context of the line graph that plots the number of close
+        approaching asteroids, a red dot indicating the day with the highest
+        number could imply the highest risk or urgency. It's a colour that
+        naturally draws the eye, emphasizing the importance of that particular
+        data point.
+      </p>
+      <p class="post-text">
+        By using the green for the Lowest Point in Line Graph as effective as
+        green is commonly associated with safety, calmness, and positivity. For
+        the day with the least number of close approaching asteroids, green
+        suggests a day of lesser risk or concern. This colour choice is
+        intuitive, especially when contrasted with red, as they are opposites
+        both in terms of meaning and position on a colour wheel.
+      </p>
+      <p class="post-text">
+        Tooltip Background and Font Color: The tooltip's primary function is to
+        provide additional information without distracting from the main graph.
+        I will use a dark background colour background colour that contrasts
+        nicely with the light font colour which will ensure readability. A
+        semi-opaque background will be beneficial to ensure the tooltip does not
+        entirely obscure the data beneath it.
+      </p>
+      <p class="post-text">
+        By incorporating these ideas and features, the visualization in my
+        project will not only become more user-friendly but also more
+        informative, accurate, and accessible. It's a balance of design,
+        functionality, and user experience.
+      </p>
+    </article>
+    <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
+    <footer id="footer"></footer>
+  </body>
+  <script src="../JavaScript/navbar.js"></script>
+  <script src="../JavaScript/footer.js"></script>
+</html>
