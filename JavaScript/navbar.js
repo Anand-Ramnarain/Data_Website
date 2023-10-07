@@ -117,13 +117,13 @@ function initializeMenuToggle() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  const currentPage = location.pathname.split("/").pop(); // Gets the current page filename
+  const currentPage = location.pathname.split("/").pop();
 
-  const links = document.querySelectorAll("#navbar a"); // Selects all anchor tags in navbar
+  const links = document.querySelectorAll("#navbar a"); 
 
   links.forEach(link => {
       if (link.getAttribute("href").includes(currentPage)) {
-          link.classList.add("active"); // Add active class to the link that corresponds to current page
+          link.classList.add("active");
       }
   });
 });
