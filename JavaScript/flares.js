@@ -1,58 +1,24 @@
 const apiKey = "mqVBkEDJKwEtL2xVKR1mBAYdWCvU4qdOZgx2LNbJ";
 
-const API_URL =
-  "https://api.nasa.gov/insight_weather/?api_key="+apiKey+"&feedtype=json&ver=1.0";
-
-renderGraph(2022, 1, 12);
-
 async function fetchData(startDate, endDate) {
-  const baseURL =
-    `https://api.nasa.gov/DONKI/FLR?startDate=${startDate}&endDate=${endDate}&api_key=`+apiKey;
-
-  const response = await fetch(baseURL);
-  if (response.ok) {
-    return response.json();
-  } else {
-    console.error("Failed to fetch data from DONKI API.");
-    return [];
-  }
+  const url = `https://api.nasa.gov/DONKI/FLR?startDate=${startDate}&endDate=${endDate}&api_key=${apiKey}`;
+  const response = await fetch(url);
+  if (response.ok) return response.json();
+  console.error("Failed to fetch data from DONKI API.");
+  return [];
 }
 
-function monthNumberToName(month) {
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  return monthNames[month - 1];
-}
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 async function getFlareCountsForMonths(year, startMonth, endMonth) {
   let counts = [];
   for (let month = startMonth; month <= endMonth; month++) {
     const daysInMonth = new Date(year, month, 0).getDate();
-    const startDate = `${year}-${month}-01`;
-    const endDate = `${year}-${month}-${daysInMonth}`;
-
-    const flares = await fetchData(startDate, endDate);
-    counts.push({
-      month: `${monthNumberToName(month)} ${year}`,
-      count: flares.length,
-    });
+    const flares = await fetchData(`${year}-${month}-01`, `${year}-${month}-${daysInMonth}`);
+    counts.push({ month: `${monthNames[month - 1]} ${year}`, count: flares.length });
   }
   return counts;
-  
 }
-
 
 async function renderGraph(year, startMonth, endMonth) {
   const flareCounts = await getFlareCountsForMonths(year, startMonth, endMonth);
@@ -148,65 +114,29 @@ async function renderGraph(year, startMonth, endMonth) {
     });
 }
 
-const url =
-  "https://api.nasa.gov/DONKI/FLR?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&api_key=" +
-  apiKey;
-
 function getDONKIUrlForMonth(year, month) {
-  const startDate = new Date(year, month - 1, 1);
-  const endDate = new Date(year, month, 0);
-
-  const formattedStartDate = startDate.toISOString().split("T")[0];
-  const formattedEndDate = endDate.toISOString().split("T")[0];
-
-  return (
-    `https://api.nasa.gov/DONKI/FLR?startDate=${formattedStartDate}&endDate=${formattedEndDate}&api_key=` +
-    apiKey
-  );
+  const startDate = new Date(year, month - 1, 1).toISOString().split("T")[0];
+  const endDate = new Date(year, month, 0).toISOString().split("T")[0];
+  return `https://api.nasa.gov/DONKI/FLR?startDate=${startDate}&endDate=${endDate}&api_key=${apiKey}`;
 }
 
-function fetchAndRenderData() {
-  const selectedYear = +document.getElementById("year").value;
-  const selectedMonth = +document.getElementById("month").value;
-  const selectedUrl = getDONKIUrlForMonth(selectedYear, selectedMonth);
-
-  fetch(selectedUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      createPieChart(processData(data));
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
-}
-
-const defaultYear = 2022;
-const defaultMonth = 1;
-const defaultUrl = getDONKIUrlForMonth(defaultYear, defaultMonth);
-
-fetch(defaultUrl)
-  .then((response) => response.json())
-  .then((data) => {
+async function fetchAndRenderData(year = 2022, month = 1) {
+  const url = getDONKIUrlForMonth(year, month);
+  try {
+    const data = await (await fetch(url)).json();
     createPieChart(processData(data));
-  })
-  .catch((error) => {
+  } catch (error) {
     console.error("Error fetching data:", error);
-  });
+  }
+}
 
 function processData(data) {
   const flareTypes = {};
-
-  data.forEach((flare) => {
+  data.forEach(flare => {
     const classification = flare.classType.charAt(0);
-    if (!flareTypes[classification]) {
-      flareTypes[classification] = 0;
-    }
-    flareTypes[classification]++;
+    flareTypes[classification] = (flareTypes[classification] || 0) + 1;
   });
-
-  return Object.entries(flareTypes).map(([key, value]) => {
-    return { type: key, count: value };
-  });
+  return Object.entries(flareTypes).map(([type, count]) => ({ type, count }));
 }
 
 function getTotalCount(data) {
@@ -255,3 +185,6 @@ function createPieChart(data) {
       return `${d.data.type}: ${percentage.toFixed(2)}%`;
     });
 }
+
+renderGraph(2022, 1, 12);
+fetchAndRenderData();
