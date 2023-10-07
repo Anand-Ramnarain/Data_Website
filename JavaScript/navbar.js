@@ -1,36 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
+  initializeHeader();
+  initializeNavbar();
+  initializeScrollEvent();
+  initializeMenuToggle();
+});
+
+function initializeHeader() {
   const header = document.getElementById("head");
-  const headItem = [
-    { icon: "bx bxs-home", text: "DataWebsite", href: "https://anand-ramnarain.github.io/Data_Website/index.html", class: "logo" },
-  ];
+  const headItem = [{
+    icon: "bx bxs-home",
+    text: "DataWebsite",
+    href: "https://anand-ramnarain.github.io/Data_Website/index.html",
+    class: "logo"
+  }];
 
-  const navbar = document.getElementById("navbar");
-  const navItems = [
-    { text: "Home", href: "https://anand-ramnarain.github.io/Data_Website/index.html" },
-    { text: "Blogs", href: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html" },
-    { text: "Design", href: "https://anand-ramnarain.github.io/Data_Website/html/design-main.html" },
-    { text: "Data-Visualisation", href: "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html" },
-    { text: "Data-Art", href: "https://anand-ramnarain.github.io/Data_Website/html/data-art.html" },
-  ];
+  addIconToHeader(header);
+  appendHeaderItems(header, headItem);
+}
 
-  const ulElement = document.createElement("ul");
-  ulElement.classList.add("navlist");
-
+function addIconToHeader(header) {
   const navIcon = document.createElement("div");
   navIcon.classList.add("nav-icon");
 
   const itemIcon = document.createElement("i");
-  itemIcon.setAttribute("href", itemIcon.href);
   itemIcon.className = "bx bx-search-alt-2";
   navIcon.appendChild(itemIcon);
 
   const menuIcon = document.createElement("div");
   menuIcon.id = "menu-icon";
   menuIcon.className = "bx bx-menu";
-
   navIcon.appendChild(menuIcon);
-  header.appendChild(navIcon);
 
+  header.appendChild(navIcon);
+}
+
+function appendHeaderItems(header, headItem) {
   for (let items of headItem) {
     const an = document.createElement("a");
     an.setAttribute("href", items.href);
@@ -42,68 +46,85 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     an.appendChild(document.createTextNode(items.text));
-
-    if (items.class) {
-      an.classList.add(items.class);
-    }
-
+    if (items.class) an.classList.add(items.class);
     header.insertBefore(an, header.firstChild);
   }
+}
+
+function initializeNavbar() {
+  const navbar = document.getElementById("navbar");
+  const navItems = [
+    { text: "Home", href: "https://anand-ramnarain.github.io/Data_Website/index.html" },
+    { text: "Blogs", href: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html" },
+    { text: "Design", href: "https://anand-ramnarain.github.io/Data_Website/html/design-main.html" },
+    { text: "Data-Visualisation", href: "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html" },
+    { text: "Data-Art", href: "https://anand-ramnarain.github.io/Data_Website/html/data-art.html" },
+];
+
+
+  appendNavbarItems(navbar, navItems);
+}
+
+function appendNavbarItems(navbar, navItems) {
+  const ulElement = document.createElement("ul");
+  ulElement.classList.add("navlist");
 
   for (let item of navItems) {
     const liElement = document.createElement("li");
     const anchor = document.createElement("a");
     anchor.setAttribute("href", item.href);
-
     anchor.appendChild(document.createTextNode(item.text));
-
-    if (item.class) {
-      anchor.classList.add(item.class);
-    }
-
+    if (item.class) anchor.classList.add(item.class);
     liElement.appendChild(anchor);
     ulElement.appendChild(liElement);
-
     navbar.appendChild(ulElement);
 
     anchor.addEventListener("onclick", function(){
       setActive(anchor);
     });
   }
+}
 
-  function setActive(activeElement) {
-    const anchors = document.querySelectorAll("#navbar a");
-    for (let anchor of anchors) {
-      if (anchor === activeElement) {
-        anchor.classList.add("active");
-      } else {
-        anchor.classList.remove("active");
-      }
-    }
+function setActive(activeElement) {
+  const anchors = document.querySelectorAll("#navbar a");
+  for (let anchor of anchors) {
+    if (anchor === activeElement) anchor.classList.add("active");
+    else anchor.classList.remove("active");
   }
+}
+
+function initializeScrollEvent() {
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", function () {
+    header.classList.toggle("sticky", window.scrollY > 80);
+    header.classList.toggle("shadow", window.scrollY > 0);
+  });
+}
+
+function initializeMenuToggle() {
+  const menu = document.querySelector("#menu-icon");
+  const navlist = document.querySelector(".navlist");
+
+  menu.onclick = function() {
+    menu.classList.toggle("bx-x");
+    navlist.classList.toggle("open");
+  }
+
+  window.onscroll = function() {
+    menu.classList.remove("bx-x");
+    navlist.classList.remove("open");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const currentPage = location.pathname.split("/").pop(); // Gets the current page filename
+
+  const links = document.querySelectorAll("#navbar a"); // Selects all anchor tags in navbar
+
+  links.forEach(link => {
+      if (link.getAttribute("href").includes(currentPage)) {
+          link.classList.add("active"); // Add active class to the link that corresponds to current page
+      }
+  });
 });
-
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", function () {
-  header.classList.toggle("sticky", window.scrollY > 80);
-  header.classList.toggle("shadow", window.scrollY > 0);
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  let menu = document.querySelector("#menu-icon");
-  let navlist = document.querySelector(".navlist");
-  
-  menu.onclick = () => {
-      menu.classList.toggle("bx-x");
-      navlist.classList.toggle("open");
-  };
-  
-  window.onscroll = () => {
-      menu.classList.remove("bx-x");
-      navlist.classList.remove("open");
-  };
-});
-
 

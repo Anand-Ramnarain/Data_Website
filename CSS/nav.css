@@ -76,6 +76,11 @@ header.sticky {
   color: var(--main-colour);
 }
 
+#navbar a.active {
+  color: var(--main-colour);
+}
+
+
 .nav-icon {
   display: flex;
   align-items: center;
