@@ -40,3 +40,27 @@ img {
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+#footer {
+  position: relative;
+  top: 70vh; /* Adjust this value as needed */
+}
+
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* this will cover the full view height */
+}
+
+.post-header, .post-content.post-container, .scroll {
+  flex: 1 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+

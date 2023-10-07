@@ -196,6 +196,7 @@ header.sticky {
   align-items: center;
   flex-wrap: wrap;
   padding: 0.5rem 5%;
+  flex-shrink: 0;
 }
 
 .footer-text p {
@@ -218,4 +219,8 @@ header.sticky {
 
 .navlist.open {
   display: block;
+}
+
+#content-wrapper {
+  flex: 1 0 auto; /* This ensures that the content wrapper takes up all the available space, pushing the footer down */
 }
