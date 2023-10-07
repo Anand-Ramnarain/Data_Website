@@ -115,6 +115,16 @@ header.sticky {
   color: var(--text-colour);
 }
 
+#search-input {
+  border: 1px solid #ffffff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  outline: none;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+
 .home {
   position: relative;
   height: 100vh;
