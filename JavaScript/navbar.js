@@ -119,12 +119,18 @@ function initializeMenuToggle() {
 const urlCategoryMap = {
   "blog-post": "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
   "reading-post": "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "reflection-post":"https://anand-ramnarain.github.io/Data_Website/html/reflection-post.html",
-  "close-reading":"https://anand-ramnarain.github.io/Data_Website/html/blog3.html",
-  "design-main":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "wireframes":"https://anand-ramnarain.github.io/Data_Website/html/wireframes.html",
-  "style-guide":"https://anand-ramnarain.github.io/Data_Website/html/style-guide.html",
-  "revised-style-guide":"https://anand-ramnarain.github.io/Data_Website/html/revised-style-guide.html"
+  "reflection-post":"https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "blog3":"https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "design-main": "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "wireframes":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "style-guide":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "revised-style-guide":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "planning-visual-data":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "more-planning-data-visual":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "as&sol":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "data-visual-main":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
+  "data-visual":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
+  "data-visual-2":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html"
 };
 
 
