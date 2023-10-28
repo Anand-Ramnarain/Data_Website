@@ -58,7 +58,7 @@ function initializeNavbar() {
     { text: "Blogs", href: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html" },
     { text: "Design", href: "https://anand-ramnarain.github.io/Data_Website/html/design-main.html" },
     { text: "Data-Visualisation", href: "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html" },
-    { text: "Data-Art", href: "https://anand-ramnarain.github.io/Data_Website/html/data-art.html" },
+    { text: "Data-Art", href: "https://anand-ramnarain.github.io/Data_Website/html/data-art.html" }
 ];
 
 
@@ -130,7 +130,8 @@ const urlCategoryMap = {
   "as&sol":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "data-visual-main":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
   "data-visual":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
-  "data-visual-2":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html"
+  "data-visual-2":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
+  "data-art":"https://anand-ramnarain.github.io/Data_Website/html/data-art.html"
 };
 
 
