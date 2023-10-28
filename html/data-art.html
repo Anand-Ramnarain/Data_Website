@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Interactive Media Data Art" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Anand Ramnarain" />
     <title>Data Art</title>
+    <link rel="stylesheet" href="../CSS/visual.css" />
     <link rel="stylesheet" href="../CSS/nav.css" />
+    <link rel="stylesheet" href="../CSS/blog.css" />
+    <link rel="stylesheet" href="../CSS/game.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
@@ -17,10 +17,71 @@
     <header id="head">
       <nav id="navbar"></nav>
     </header>
+
+    <main class="post-header block" id="content-wrapper">
+      <section class="header-content post-container">
+        <a href="../index.html" class="back-home">Back</a>
+
+        <h1 class="header-title">Data Art: Astroid Defenders</h1>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <article class="post-content post-container">
+          <p class="post-text">
+            For my data visualisation, I have 2 sections in data visualisation.
+            The first is solar flare and the other is Astriods. In both of these
+            sections, I have 2 graphs.
+          </p>
+          <h2 class="sub-heading">Solar Flare:</h2>
+          <p class="post-text">- 1 Interactive Bar Graph</p>
+          <p class="post-text">- 1 Static Pie Chart</p>
+          <h2 class="sub-heading">Asteroid:</h2>
+          <p class="post-text">- 1 Interactive line Graph</p>
+          <p class="post-text">- 1 Static Pie Chart</p>
+
+          <h2 class="sub-heading">Solar Flares</h2>
+          <p class="post-text">
+            On the solar flares page, I have a bar graph showcasing the number
+            of solar flares each month in the year 2022. By hovering over each
+            bar to see the specific number of solar flares and the corresponding
+            month adds depth to the user experience. It offers instant and
+            detailed insights without cluttering my main visualization. The pie
+            chart is static but the user can choose the month to see the
+            breakdown of solar flare types. By allowing the users to choose a
+            specific month and then presenting a breakdown of the types of solar
+            flares in a pie chart, they can understand the data better.
+          </p>
+
+          <h2 class="sub-heading">Asteroids</h2>
+          <p class="post-text">
+            For the asteroid page, I have 1 Interactive visualization, a line
+            graph, so the users have more engagement with the interactive graph,
+            as it provides a deeper experience, allowing users to extract
+            specific data points of interest, such as how many asteroids are
+            closing and approaching earth. The static pie chart is also there to
+            provide more insight into the asteroid as the user can select the
+            date and they can see the different sizes of the asteroid that are
+            represented in the line graph. This offers a diverse representation
+            of the data. As i presenting data in both a line graph and a pie
+            chart. While the line graph shows trends how the number of
+            asteroids, the pie chart gives a holistic view of the sizes of the
+            asteroids. I am also allowing for user customization, as the users
+            can choose data for the pie chart and line graph, providing them
+            with a sense of control and letting them explore specific dates of
+            interest. This will increase user engagement. With the interactive
+            graph, by hovering over dots in a line graph, users can quickly
+            gather information without navigating to another page or section.
+            It's a quick way to convey detailed data.
+          </p>
+        </article>
+      </section>
+      <footer id="footer"></footer>
+    </main>
+    <!-- <footer id="footer"></footer> -->
     <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
-    <footer id="footer"></footer>
   </body>
   <script src="../JavaScript/navbar.js"></script>
   <script src="../JavaScript/footer.js"></script>
+  <script src="../JavaScript/game.js"></script>
+  <script src="../JavaScript/randomImage.js"></script>
   <!-- <script src="../JavaScript/script.js"></script> -->
 </html>

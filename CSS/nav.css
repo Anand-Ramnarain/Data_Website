@@ -222,5 +222,5 @@ header.sticky {
 }
 
 #content-wrapper {
-  flex: 1 0 auto; /* This ensures that the content wrapper takes up all the available space, pushing the footer down */
+  flex: 1 0 auto; 
 }
