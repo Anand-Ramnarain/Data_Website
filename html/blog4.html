@@ -6,7 +6,7 @@
     <meta name="description" content="Interactive Media Post reflection " />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Anand Ramnarain" />
-    <title>Close Reading</title>
+    <title>Critical Reflection</title>
     <link rel="stylesheet" href="../CSS/nav.css" />
     <link rel="stylesheet" href="../CSS/blog.css" />
     <link
@@ -34,148 +34,142 @@
 
     <article class="post-content post-container">
       <p class="post-text">
-        People often disagree about what interaction means in the world of data
-        visualization. The term interaction is confusing because there isn't one
-        clear definition everyone can agree on. Some look at it from the angle
-        of information displays, while others think of it from a tech or design
-        perspective. By investigating the article by Evanthia Dimara and Charles
-        Perin’ on “What is Interaction for Data Visualization?” and comparing it
-        to how Human-Computer Interaction defines it. In this blog, we'll look
-        at what everyone is saying to compare the different views while trying
-        to come up with a clear and helpful definition that guides designs and
-        ideas on what interaction is in data visualisation.
+        Gaming, at its core, integrates principles of data-driven art, allowing
+        players to immerse in environments where every pixel, sound, and
+        reaction is the creation of structured data. Therefore, I have crafted a
+        game titled Asteroids Defenders for my data-driven art using HTML, CSS
+        and Javascript. Asteroid Defenders is not simply an ordinary game, but
+        rather an artwork displaying dangers in real-time and actual figures. It
+        uses data from NASA's Near-Earth Objects API to connect the data from
+        the API with the physicality of gaming. It engages the players with the
+        uncertainties and dangers of space and the impact it can have on Earth.
       </p>
       <p class="post-text">
-        For us to start to define interaction in data visualisation, we first
-        need to investigate the entities and actions needed to understand it.
-        There are two types of entities needed to understand the interaction.
-        The first is the external entities, this is when the user is at the
-        focus point of the interaction and they are the external entity, as the
-        user is being described as someone with "skills, abilities, motivation,
-        and expertise."(Dimara & Perin 2020) This is because the user can
-        connect the data to the visualisation system making it so the
-        interaction between the data and visualisation system is instant and
-        clear from the beginning to the end.
+        Crafting a game in HTML was a first-time experience for me. I began with
+        extensive research on YouTube, exploring different game types and their
+        creation techniques. After familiarizing myself with the game-building
+        process, the next step was conceptualizing the game. This involved
+        figuring out the mechanics, gameplay, and API integration. My idea for
+        "Asteroid Defenders" is a canvas-based space shooter where the player
+        acts as Earth's final safeguard against approaching asteroids. Earth,
+        placed in the centre with a protective shield, faces imminent asteroid
+        threats. As a player, the mission is to obliterate these threats before
+        they deplete the shield, thereby preventing the annihilation of our
+        planet.
       </p>
       <p class="post-text">
-        Additionally, the next is the internal entity. The internal entity is
-        not just about the physical action, but it is rather about the
-        "cognitive act of the user"(Dimara & Perin 2020) and their goal with the
-        data. This is an indication that the internal entity isn’t just about
-        the how user touches or interacts with the screen but rather the user’s
-        interaction is working towards a specific purpose. Like on my website,
-        the users interact on the home page when they click on an option in the
-        navigation bar, it guides them to the section or when the user scrolls
-        down the page. Their interaction with the website shows how they want to
-        view or go to a certain part of it, as there is intent to what they want
-        to do. Shows how the user and the system are like a “dialogue”(Dimara &
-        Perin 2020), as each action they perform is getting a response. This
-        shows how the entities are essential to understanding interaction as
-        they allow the users to engage with the website.
+        With this clear idea of the game, the creation phase began. I started
+        the process by creating the canvas for gameplay, followed by the static
+        objects of the stationary Earth and its shield. This was the first step
+        as it will always be on the canvas and will never change, The next
+        aspect was integrating the player-controlled spaceship, which has
+        movement and a shooting mechanic. Thankfully, my prior research played a
+        pivotal role in understanding the frame updates, which allowed for the
+        implementation of a smoother object movement.
       </p>
       <p class="post-text">
-        Furthermore, we must understand the properties of interaction before
-        defining it. One of the most important properties that must include
-        interaction is its granularity, this is where it can go from
-        "micro-level"(Dimara & Perin 2020) actions, like mouse clicks, to a
-        "macro-level"(Dimara & Perin 2020) like data analysis or even
-        storytelling with data. but still help us see that through the
-        granularity interactions, we can identify the user's engagement with the
-        website. It offers us insight into how to guide a data visualisation’s
-        interfaces as in the specific actions, like choosing a particular piece
-        of data, or whether should it just be done for general tasks, like
-        looking at overall trends like what happens within a year.
+        I want to use the API to create a form of dynamic data interaction
+        within my game, as most games rely on predefined levels, I wanted to
+        make it so my game uses the API for the unpredictability of the
+        real-time asteroid data. The dynamic interaction with the data allows
+        each gameplay experience to be unique, which will play a role in
+        emphasising the vastness and unpredictability of space. I want to
+        enhance further through the visual representation of the game, by using
+        a minimalist visual strategy: a blue planet for Earth, a protective
+        shield, and asteroids. By using these simple visuals, it will emphasize
+        the data, as it will be the primary focus.
       </p>
       <p class="post-text">
-        Furthermore, interactions vary in their properties, this is because
-        properties can be either "continuous"(Dimara & Perin 2020), like mouse
-        drags to perform a lasso selection, or they can be "discrete"(Dimara &
-        Perin 2020), as clicking on a checkbox or button to filter the selection
-        of item. Identifying between these 2 properties helps us in
-        understanding how the user engages with data visualisation over time.
-        This is because it will show us the pace of the user experience on the
-        website as it can show us if the user wants to see the specific point on
-        the data or just want to be guided through it.
+        To create this in my game, I started by firstly focusing on getting one
+        wave on asteroids, So I used the API to fetch the data on asteroids,
+        from the data provided from the asteroids, I was able to create a
+        function that will take that data to created and draw the asteroids on
+        the screen. By focusing on this aspect the game will engage with the
+        data through the size and speed of the asteroids. It will take the
+        estimated diameter of asteroids in real life and place them in the game
+        to fit on the screen. To further the real-life feel of the game I made
+        it so it will determine the asteroid's speed based on this size as it
+        was travelling in real time, I did the same for the damage, as the
+        damage for the asteroids is calculated through the size of the asteroids
+        as bigger asteroids to more damage to the shield than a smaller one
+        would, this also adds to gameplay as larger asteroids feel more
+        daunting. The aspect with which I was struggling was the direction of
+        asteroids, as I couldn’t implement it so that asteroids would appear in
+        the direction they were coming from, so I decided to make it so it is
+        randomised. This is so asteroids appear from random directions, but I
+        did this also so it can reinforce the idea of the vast, unpredictable
+        nature of space. This was the basis of my game and how I worked on it.
       </p>
       <p class="post-text">
-        Another set of properties used in interaction is directness or
-        indirectness. Indirect interactions are actions or interactions done
-        through tools or widgets. They are indirect because they don't engage
-        directly with the data's visuals, whereas direct interactions allow the
-        user to work directly with the data or objects within the visual.
-        Knowing this property enables to use of the data for functionality and
-        to make a clear idea of what is represented as the user can grasp the
-        visualization and investigate further into it.
+        Furthermore, we can investigate how this game ties into being classified
+        as data-driven art. The use of the actual data and the visual
+        representation in my game overlaps and indicates the growing value of
+        data visualization as in “Artistic Data Visualization: Beyond Visual
+        Analytics.” They explain how data in data art in an instance represents
+        the data set, I understood how my game can be used to combine the
+        standard gameplay approach with the ideology behind data visualisation.
+        It gets real asteroids' information from NASA's NEO API which populates
+        my game with components using real-time data and this is an instance of
+        the idea.
       </p>
       <p class="post-text">
-        Now that we have established the foundation for understanding
-        interaction, we can help in building a working definition. Investigating
-        the core of data visualisation shows that it is the art of changing
-        information into a visual, which will allow users to see different types
-        of patterns and insights into the data. (QlikQ 2023) This is how we used
-        to see data visualisation and interaction, but modern technology has
-        changed over time and the role of the user just being an observer has
-        stopped, as now the user must actively engage with the visualisations.
-        Showing where the interaction comes from and where is it important. This
-        statement aids in defining that interaction as "interaction for
-        visualization is the interplay between a person and a data interface
-        with a specific intent related to data.”(Dimara & Perin 2020) This
-        indicates that the main focus isn’t just the action itself but rather
-        the nature of the action and reaction, allowing for a relationship
-        between the user and the data.
+        Moreover, Martin Wattenberg suggests that there's a "renewed interest in
+        Infovis' role as an intelligence tool",(Wattenberg & Viégas 2007 p 182)
+        my game transforms this raw information into a “gamified” model,
+        allowing players to engage with real-world data in a fun and interactive
+        way. It bridges the gap between "scientific analytic tasks" (Wattenberg
+        & Viégas 2007 p 182) and the "implications of the surge of artistic
+        interest in visualization." (Wattenberg & Viégas 2007 p 182) By merging
+        the traditional principles of game mechanics with data-driven elements,
+        it offers players a unique experience that is both entertaining and
+        real. In the game, players navigate through an immersive space
+        environment where the primary objective is to shield a central planet
+        from incoming asteroids. Drawing from this work on the description of
+        data-driven visual stories, my game has a blend of exploration and
+        explanation, as seen in its visual and interaction design.
       </p>
       <p class="post-text">
-        Furthermore, the definition so far shows us that interaction is much
-        more than just a simple point-and-click interaction, but rather a
-        connection with “interplay.”(Dimara & Perin 2020) This refers to the
-        interaction between the users and the data visualisation, as both the
-        user and the data visuals need to be active, and work towards a specific
-        purpose, when a user hovers over a point in a line chart, the
-        visualization provides detailed information about that data point and
-        everything about it. This is important as it allows us to “see the
-        patterns in both visualization and HCI."(Dimara & Perin 2020) This
-        highlights how valuable it is for users to feel the data visualization
-        responds to them, as they can understand it. This highlights the
-        importance of interaction in data visualization. As technologies
-        progress data becomes important in decision-making, as it allows for the
-        users to actively engage with data visualizations while drawing meaning
-        from it.
+        Furthermore, we can investigate my game through the lens of Data-driven
+        storytelling. From the point of view dimension, my game visually has
+        several components—a central planet, a protecting shield, the control of
+        spaceships and approaching asteroids. Similarly to data-driven stories
+        that "How data is shown to the reader, including the available encodings
+        and any transformations made on the data",(Walny et al. pp68) the game
+        uses visual encodings to present the shield health level, the time
+        survivors managed to survive and the upcoming asteroid
       </p>
       <p class="post-text">
-        Therefore, after a careful analysis of the various perspectives on
-        interaction in data visualization. We found that even though many people
-        define 'interaction' differently, it's about more than just touching or
-        using tools. The article “What is Interaction for Data Visualization?”
-        shows us that interaction is mainly the deep connection between a user
-        and the data visualization. It's not only about the tools used, but it's
-        the key link between users and data that helps them understand the
-        information better.
+        Data Stories focus on "a particular set or subset of data
+        shown".",(Walny et al. pp 69) These are aimed in the game towards the
+        planet's preservation. As the players decide where to place their
+        attention, they are controlling the ship, shooting the asteroids, and
+        make sure the shield's health is not at zero, making sure the player is
+        aware of all these components. It is similar to "visualizations give
+        readers their interaction tools for focusing".",(Walny et al.72) As in
+        the game from the reading, the players must make choices regarding the
+        direction they take will largely determine whether they succeed or fail
+        in playing the game in how long they will survive.
+      </p>
+      <p class="post-text">
+        Therefore, after an examination of the game "Asteroid Defenders" and its
+        interplay with data-driven storytelling, we have found that while
+        traditional gaming mechanics serve as the foundation for player
+        engagement, the use of live data, from NASA's NEO API, adds a layer of
+        realism and unpredictability to the gaming experience. Thus, "Asteroid
+        Defenders" stands as an indication of the evolving intersection of
+        gaming, art, and real-world data, creating an immersive experience in
+        the vast and unpredictable nature of our space.
       </p>
       <h2 class="sub-heading">Bibliography</h2>
       <p class="post-text">
-        • Dimara, E & Perin, C. 2020. What is Interaction for Data
-        Visualization? IEEE Transactions on Visualization and Computer Graphics
-        26 (1), pp.119 - 129.
+        • Viégas B, F & Wattenberg, M. 2007. Artistic Data Visualization: Beyond
+        Visual Analytics: Online Communities and Social Computing. Cambridge.
+        Pp. 182- 191.
       </p>
       <p class="post-text">
-        •Merriam-Webster's Dictionary. 2023.Online Edition. Online.
-        <a href="https://www.merriam-webster.com/dictionary/interplay"
-          >https://www.merriam-webster.com/dictionary/interplay.</a
-        >
-      </p>
-      <p class="post-text">
-        • QlikQ. 2023. QlikQ. Interactive Data Visualization. Online.
-        <a
-          href="https://www.qlik.com/us/data-visualization/interactive-data-visualization#:~:text=Interactive%20data%20visualization%20is%20the,better%2C%20data%2Ddriven%20decisions"
-          >https://www.qlik.com/us/data-visualization/interactive-data-visualization#:~:text=Interactive%20data%20visualization%20is%20the,better%2C%20data%2Ddriven%20decisions.</a
-        >
-      </p>
-      <p class="post-text">
-        •Heavy. 2023 HEAVY.AI. Interactive Data Visualization. Online.
-        <a
-          href="https://www.heavy.ai/technical-glossary/interactive-data-visualization"
-          >https://www.heavy.ai/technical-glossary/interactive-data-visualization.</a
-        >
+        • Walny, J., Thudt, A., Gschwandtner, T., Dykes, J., Stasko, J. Chapter
+        3 - Exploration and Explanation in DataDriven Storytelling: Data-Driven
+        Storytelling. Pp. 60-82 >
       </p>
     </article>
 
