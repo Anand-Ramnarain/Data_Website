@@ -126,7 +126,7 @@ const urlCategoryMap = {
   "style-guide":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "revised-style-guide":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "planning-visual-data":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "more-planning-data-visual":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "more-planning-data-visuals":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "as&sol":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "data-visual-main":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
   "data-visual":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
