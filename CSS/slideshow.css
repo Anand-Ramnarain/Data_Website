@@ -43,14 +43,14 @@ img {
 
 #footer {
   position: relative;
-  top: 70vh; /* Adjust this value as needed */
+  top: 70vh;
 }
 
 
 #main-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* this will cover the full view height */
+  min-height: 100vh; 
 }
 
 .post-header, .post-content.post-container, .scroll {
@@ -62,5 +62,54 @@ img {
   clear: both;
   display: table;
 }
+
+@media (max-height: 858px){
+  #footer {
+    position: relative;
+    top: 80vh;
+  }
+}
+
+@media (max-height: 772px){
+  #footer {
+    position: relative;
+    top: 90vh;
+  }
+}
+
+@media (max-height: 667px){
+  #footer {
+    position: relative;
+    top: 100vh;
+  }
+}
+@media (max-height: 600px){
+  #footer {
+    position: relative;
+    top: 110vh;
+  }
+}
+
+@media (max-height: 545px){
+  #footer {
+    position: relative;
+    top: 120vh;
+  }
+}
+
+@media (max-height: 500px){
+  #footer {
+    position: relative;
+    top: 130vh;
+  }
+}
+
+@media (max-height: 460px){
+  #footer {
+    position: relative;
+    top: 140vh;
+  }
+}
+
 
 
