@@ -116,15 +116,31 @@ function initializeMenuToggle() {
   }
 }
 
+const urlCategoryMap = {
+  "blog-post": "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "reading-post": "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "reflection-post":"https://anand-ramnarain.github.io/Data_Website/html/reflection-post.html",
+  "close-reading":"https://anand-ramnarain.github.io/Data_Website/html/blog3.html",
+  "design-main":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "wireframes":"https://anand-ramnarain.github.io/Data_Website/html/wireframes.html",
+  "style-guide":"https://anand-ramnarain.github.io/Data_Website/html/style-guide.html",
+  "revised-style-guide":"https://anand-ramnarain.github.io/Data_Website/html/revised-style-guide.html"
+};
+
+
 document.addEventListener("DOMContentLoaded", function() {
-  const currentPage = location.pathname.split("/").pop();
+  const currentPage = location.pathname;
 
   const links = document.querySelectorAll("#navbar a"); 
 
   links.forEach(link => {
-      if (link.getAttribute("href").includes(currentPage)) {
-          link.classList.add("active");
+      for (let segment in urlCategoryMap) {
+          if (currentPage.includes(segment) && link.getAttribute("href") === urlCategoryMap[segment]) {
+              link.classList.add("active");
+              break;
+          }
       }
   });
 });
+
 
