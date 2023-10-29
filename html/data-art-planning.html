@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive Media Style Guide Colour font Layout post"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Anand Ramnarain" />
+    <title>Data Art Planning</title>
+    <link rel="stylesheet" href="../CSS/blog.css" />
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header id="head">
+      <nav id="navbar"></nav>
+    </header>
+    <main class="post-header">
+      <section class="header-content post-container">
+        <a href="../html/design-main.html" class="back-home">Back</a>
+
+        <h1 class="header-title">Documentation For Data Art</h1>
+
+        <img
+          src="../Images/further-data.png"
+          alt="Cover Image. It is not important"
+          class="header-img"
+        />
+      </section>
+    </main>
+
+    <article class="post-content post-container">
+      <h2 class="sub-heading">Overview:</h2>
+      <p class="post-text">
+        "Asteroid Defenders" is a space-themed game where players must defend a
+        planet from a barrage of incoming asteroids. The game integrates real
+        asteroid data from NASA's NEO (Near Earth Objects) API, offering a
+        realistic representation of these celestial bodies.
+      </p>
+      <h2 class="sub-heading">Game Setup:</h2>
+      <p class="post-text">• The game is on a canvas.</p>
+      <p class="post-text">
+        • The canvas's center has a blue planet, symbolizing Earth.
+      </p>
+      <p class="post-text">
+        • A protective cyan shield encircles the planet. This shield can take
+        asteroid damage.
+      </p>
+      <p class="post-text">
+        • Players control a green rectangular spaceship capable of shooting
+        projectiles to demolish asteroids.
+      </p>
+
+      <h2 class="sub-heading">Game Objective:</h2>
+      <p class="post-text">
+        The primary goal is to shield the planet from destructive asteroids.
+        Players must:
+      </p>
+      <p class="post-text">• Eliminate asteroids by targeting them.</p>
+      <p class="post-text">
+        • Prevent asteroids from making contact with the planet's protective
+        shield.
+      </p>
+      <p class="post-text">
+        • Strive to defend the planet as long as possible. The game records this
+        time and displays it on-screen.
+      </p>
+
+      <h2 class="sub-heading">Game Mechanics:</h2>
+      <h2 class="sub-heading">Asteroids:</h2>
+      <p class="post-text">
+        • Asteroids, sourced from NASA's NEO API, hurtle from random
+        trajectories towards the planet.
+      </p>
+      <p class="post-text">
+        • The API provides size and other asteroid attributes, ensuring each
+        game is different.
+      </p>
+
+      <h2 class="sub-heading">Spaceship Control:</h2>
+      <p class="post-text">• Navigate using arrow keys or WASD.</p>
+      <p class="post-text">
+        • Fire projectiles using the spacebar, F key, or by clicking the canvas.
+      </p>
+
+      <h2 class="sub-heading">Blasts:</h2>
+      <p class="post-text">
+        • These blasts obliterate any asteroid they touch.
+      </p>
+      <p class="post-text">
+        • Fire projectiles using the spacebar, F key, or by clicking the canvas.
+      </p>
+
+      <h2 class="sub-heading">Shield:</h2>
+      <p class="post-text">
+        • A health bar for the shield is visible on the screen's top-left
+        corner.
+      </p>
+      <p class="post-text">
+        • An asteroid collision reduces the shield's health based on the
+        asteroid's size.
+      </p>
+      <p class="post-text">
+        • The game concludes when the shield's health depletes entirely.
+      </p>
+
+      <h2 class="sub-heading">Game States:</h2>
+      <h2 class="sub-heading">Start:</h2>
+      <p class="post-text">
+        • The initial screen displays the game title with a "Play" button.
+      </p>
+
+      <h2 class="sub-heading">Running:</h2>
+      <p class="post-text">
+        • Players control the spaceship, annihilate asteroids, and shield the planet. 
+      </p>
+
+      <h2 class="sub-heading">Game Over:</h2>
+      <p class="post-text">
+        • Triggered when the shield's health is fully depleted.
+      </p>
+      <p class="post-text">
+        • Players view their survival time and can choose to replay the game.
+      </p>
+    </article>
+    <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
+    <footer id="footer"></footer>
+  </body>
+  <script src="../JavaScript/navbar.js"></script>
+  <script src="../JavaScript/footer.js"></script>
+</html>
