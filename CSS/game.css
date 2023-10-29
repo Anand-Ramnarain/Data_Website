@@ -13,6 +13,24 @@ canvas {
 
 #footer {
     height: 40px; 
-    width: 100%;   
+    width: 100%; 
 }
+
+:root {
+  --shield-stroke: cyan;
+  --planet-fill: blue;
+  --player-fill: orange;
+  --timer-fill: white;
+  --gameover-fill: rgba(0,0,0,0.8);
+  --gameover-text: red;
+  --asteroid-fill: lightgray;
+  --blast-stroke: deeppink;
+}
+
+:root {
+  --health-high: green;
+  --health-medium: yellow;
+  --health-low: red;
+}
+
 

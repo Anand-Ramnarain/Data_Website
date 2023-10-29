@@ -96,7 +96,7 @@ function drawShield() {
     0,
     Math.PI * 2
   );
-  ctx.strokeStyle = "cyan";
+  ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--shield-stroke').trim();
   ctx.lineWidth = 5;
   ctx.stroke();
   ctx.closePath();
@@ -105,13 +105,13 @@ function drawShield() {
 function drawPlanet() {
   ctx.beginPath();
   ctx.arc(planetPosition.x, planetPosition.y, 50, 0, Math.PI * 2);
-  ctx.fillStyle = "blue";
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--planet-fill').trim();
   ctx.fill();
   ctx.closePath();
 }
 
 function drawPlayer() {
-  ctx.fillStyle = "green";
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--player-fill').trim();
   ctx.fillRect(player.x, player.y, player.width, player.height);
 }
 
@@ -202,7 +202,7 @@ canvas.addEventListener("click", function (event) {
       shieldHealth = 100;
       currentState = GAME_STATE.RUNNING;
       gameStartTime = Date.now();
-      draw(); 
+      draw();
     }
   }
 });
@@ -246,7 +246,23 @@ function timeToReachPlanet(asteroid) {
 function drawHealthBar() {
   const maxWidth = 200;
   const width = (shieldHealth / 100) * maxWidth;
-  ctx.fillStyle = "red";
+
+  let fillColor;
+  if (shieldHealth > 60) {
+    fillColor = getComputedStyle(document.documentElement)
+      .getPropertyValue("--health-high")
+      .trim();
+  } else if (shieldHealth > 30) {
+    fillColor = getComputedStyle(document.documentElement)
+      .getPropertyValue("--health-medium")
+      .trim();
+  } else {
+    fillColor = getComputedStyle(document.documentElement)
+      .getPropertyValue("--health-low")
+      .trim();
+  }
+
+  ctx.fillStyle = fillColor;
   ctx.fillRect(10, 10, width, 20);
   ctx.strokeRect(10, 10, maxWidth, 20);
 }
@@ -273,16 +289,16 @@ function displayTimer() {
     .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
   ctx.font = "24px Arial";
-  ctx.fillStyle = "white";
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--timer-fill').trim();
   ctx.textAlign = "center";
   ctx.fillText(formattedTime, canvas.width / 2, 30);
 }
 
 async function initializeGame() {
-  asteroids = []; 
-  await fetchAsteroids(); 
-  gameStartTime = Date.now(); 
-  draw(); 
+  asteroids = [];
+  await fetchAsteroids();
+  gameStartTime = Date.now();
+  draw();
 }
 
 function drawGameOverScreen() {
@@ -328,7 +344,7 @@ function processAsteroids() {
 
     ctx.beginPath();
     ctx.arc(asteroid.x, asteroid.y, asteroid.size, 0, Math.PI * 2);
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--asteroid-fill').trim();
     ctx.fill();
     ctx.closePath();
 
@@ -374,7 +390,7 @@ function processBlasts() {
 
       ctx.beginPath();
       ctx.arc(blast.x, blast.y, blast.radius, 0, Math.PI * 2);
-      ctx.strokeStyle = "white";
+      ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--blast-stroke').trim();
       ctx.stroke();
       ctx.closePath();
     } else {
