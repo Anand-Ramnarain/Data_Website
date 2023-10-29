@@ -230,3 +230,15 @@ body {
   color: var(--bg-colour);
   box-shadow: #ff9f0d 0px 1px 20px;
 }
+
+.hazardous {
+  fill: red;
+}
+
+.non-hazardous {
+  fill: green;
+}
+
+text{
+  fill: white;
+}

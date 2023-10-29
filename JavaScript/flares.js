@@ -124,11 +124,19 @@ async function fetchAndRenderData(year = 2022, month = 1) {
   const url = getDONKIUrlForMonth(year, month);
   try {
     const data = await (await fetch(url)).json();
-    createPieChart(processData(data));
+    createPieChart(processThreatData(data)); 
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 }
+
+function fetchDataForSelectedMonth() {
+  const year = document.getElementById('year').value;
+  const month = document.getElementById('month').value;
+  fetchAndRenderData(year, month);
+}
+
+document.getElementById('month').addEventListener('change', fetchDataForSelectedMonth);
 
 function processData(data) {
   const flareTypes = {};
@@ -175,16 +183,38 @@ function createPieChart(data) {
 
   g.append("path")
     .attr("d", arc)
-    .style("fill", (d) => color(d.data.type));
+    .style("fill", (d) => color(d.data.threatLevel));
 
   g.append("text")
     .attr("transform", (d) => `translate(${arc.centroid(d)})`)
     .attr("dy", ".35em")
     .text((d) => {
       const percentage = (d.data.count / total) * 100;
-      return `${d.data.type}: ${percentage.toFixed(2)}%`;
+      return `${d.data.threatLevel}: ${percentage.toFixed(2)}%`;
     });
 }
+
+function determineThreatLevel(flare) {
+  const classification = flare.classType.charAt(0);
+  const distance = flare.distance;
+
+  if (classification === 'X' && distance < 1) return 'Critical Threat';
+  if (classification === 'M' && distance < 1) return 'High Threat';
+  if (classification === 'C' && distance < 1) return 'Moderate Threat';
+  if (distance >= 1) return 'Low Threat';
+  if (classification === 'B') return 'Minimal Threat';
+  return 'Unknown Threat';
+}
+
+function processThreatData(data) {
+  const threatLevels = {};
+  data.forEach(flare => {
+      const threatLevel = determineThreatLevel(flare);
+      threatLevels[threatLevel] = (threatLevels[threatLevel] || 0) + 1;
+  });
+  return Object.entries(threatLevels).map(([threatLevel, count]) => ({ threatLevel, count }));
+}
+
 
 renderGraph(2022, 1, 12);
 fetchAndRenderData();
