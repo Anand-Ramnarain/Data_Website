@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+}
+
+#issSvg {
+  display: block;
+  margin: auto;
+  background-color: darkgray;
+}
+
+#infoBox {
+  margin: auto;
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
+  display: none;
+}
