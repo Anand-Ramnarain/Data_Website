@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initializeHeader() {
   const header = document.getElementById("head");
-  const headItem = [{
-    icon: "bx bxs-home",
-    text: "DataWebsite",
-    href: "https://anand-ramnarain.github.io/Data_Website/index.html",
-    class: "logo"
-  }];
+  const headItem = [
+    {
+      icon: "bx bxs-home",
+      text: "DataWebsite",
+      href: "https://anand-ramnarain.github.io/Data_Website/index.html",
+      class: "logo",
+    },
+  ];
 
   addIconToHeader(header);
   appendHeaderItems(header, headItem);
@@ -54,13 +56,27 @@ function appendHeaderItems(header, headItem) {
 function initializeNavbar() {
   const navbar = document.getElementById("navbar");
   const navItems = [
-    { text: "Home", href: "https://anand-ramnarain.github.io/Data_Website/index.html" },
-    { text: "Blogs", href: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html" },
-    { text: "Design", href: "https://anand-ramnarain.github.io/Data_Website/html/design-main.html" },
-    { text: "Data-Visualisation", href: "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html" },
-    { text: "Data-Art", href: "https://anand-ramnarain.github.io/Data_Website/html/data-art.html" }
-];
-
+    {
+      text: "Home",
+      href: "https://anand-ramnarain.github.io/Data_Website/index.html",
+    },
+    {
+      text: "Blogs",
+      href: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+    },
+    {
+      text: "Design",
+      href: "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+    },
+    {
+      text: "Data-Visualisation",
+      href: "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
+    },
+    {
+      text: "Data-Art",
+      href: "https://anand-ramnarain.github.io/Data_Website/html/art-main.html",
+    },
+  ];
 
   appendNavbarItems(navbar, navItems);
 }
@@ -79,7 +95,7 @@ function appendNavbarItems(navbar, navItems) {
     ulElement.appendChild(liElement);
     navbar.appendChild(ulElement);
 
-    anchor.addEventListener("onclick", function(){
+    anchor.addEventListener("onclick", function () {
       setActive(anchor);
     });
   }
@@ -105,51 +121,66 @@ function initializeMenuToggle() {
   const menu = document.querySelector("#menu-icon");
   const navlist = document.querySelector(".navlist");
 
-  menu.onclick = function() {
+  menu.onclick = function () {
     menu.classList.toggle("bx-x");
     navlist.classList.toggle("open");
-  }
+  };
 
-  window.onscroll = function() {
+  window.onscroll = function () {
     menu.classList.remove("bx-x");
     navlist.classList.remove("open");
-  }
+  };
 }
 
 const urlCategoryMap = {
-  "blog-post": "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "reading-post": "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "reflection-post":"https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "blog3":"https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "blog4":"https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "design-main": "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "wireframes":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "style-guide":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "revised-style-guide":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "planning-visual-data":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "more-planning-data-visuals":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "as&sol":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "data-art-planning":"https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "data-visual-main":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
-  "data-visual":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
-  "data-visual-2":"https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
-  "data-art":"https://anand-ramnarain.github.io/Data_Website/html/data-art.html"
+  "blog-post":
+    "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "reading-post":
+    "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "reflection-post":
+    "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  blog3: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  blog4: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "design-main":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  wireframes:
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "style-guide":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "revised-style-guide":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "planning-visual-data":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "more-planning-data-visuals":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "as&sol":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "data-art-planning":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "data-visual-main":
+    "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
+  "data-visual":
+    "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
+  "data-visual-2":
+    "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
+  "data-art":
+    "https://anand-ramnarain.github.io/Data_Website/html/data-art.html",
 };
 
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const currentPage = location.pathname;
 
-  const links = document.querySelectorAll("#navbar a"); 
+  const links = document.querySelectorAll("#navbar a");
 
-  links.forEach(link => {
-      for (let segment in urlCategoryMap) {
-          if (currentPage.includes(segment) && link.getAttribute("href") === urlCategoryMap[segment]) {
-              link.classList.add("active");
-              break;
-          }
+  links.forEach((link) => {
+    for (let segment in urlCategoryMap) {
+      if (
+        currentPage.includes(segment) &&
+        link.getAttribute("href") === urlCategoryMap[segment]
+      ) {
+        link.classList.add("active");
+        break;
       }
+    }
   });
 });
-
-
