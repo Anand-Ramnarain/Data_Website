@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive Media Style Guide Colour font Layout post"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Anand Ramnarain" />
+    <title>Data Art Planning</title>
+    <link rel="stylesheet" href="../CSS/blog.css" />
+    <link rel="stylesheet" href="../CSS/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header id="head">
+      <nav id="navbar"></nav>
+    </header>
+    <main class="post-header">
+      <section class="header-content post-container">
+        <a href="../html/design-main.html" class="back-home">Back</a>
+
+        <h1 class="header-title">Documentation For Exam Data Art</h1>
+
+        <img
+          src="../Images/planningart.jpeg"
+          alt="Cover Image. It is not important"
+          class="header-img"
+        />
+      </section>
+    </main>
+
+    <article class="post-content post-container">
+      <h2 class="sub-heading">Overview:</h2>
+      <p class="post-text">
+        For my exam data art, I have decided to create data art that will track
+        the ISS as it is moving in space and show it as it is moving. Here are
+        my objectives to get this working:
+      </p>
+      <h2 class="sub-heading">Objectives:</h2>
+      <p class="post-text">
+        1. Fetch real-time data about the International Space Station (ISS).
+      </p>
+      <p class="post-text">2. Visualize the ISS position on an SVG map.</p>
+      <p class="post-text">
+        3. Display information about the ISS location and provide city and
+        country details.
+      </p>
+      <p class="post-text">
+        4. Implement smooth transitions and updates every 5 seconds to reflect
+        real-time changes.
+      </p>
+
+      <h2 class="sub-heading">The first thing I will have to do is:</h2>
+      <h3 class="sub-heading">Data Fetching:</h3>
+      <p class="post-text">
+        By this, I need to use a fetchData function that fetches' API to get
+        real-time ISS data so I can start creating my artwork
+      </p>
+      <h3 class="sub-heading">Visualization:</h3>
+      <p class="post-text">
+        • once I get the data I will use D3.js for data binding, SVG
+        manipulation, and visualization, this is so I can create the canvas and
+        every component in it so it is functional.
+      </p>
+      <p class="post-text">
+        • The SVG container will be updated to reflect the ISS position and a
+        starry background will be created for visual appeal.
+      </p>
+      <p class="post-text">
+        • Radial gradients are applied to the Earth and ISS circles for a
+        realistic appearance.
+      </p>
+
+      <h3 class="sub-heading">Event Handling:</h3>
+      <p class="post-text">
+        • Mouseover and mouseout event listeners are added to the Earth and ISS
+        circles. This is so I can display information about the ISS location and
+        city/country details displayed on mouseover so we can see whast city is
+        it over.
+      </p>
+
+      <h3 class="sub-heading">Geocoding:</h3>
+      <p class="post-text">
+        • I will create a display Location Info function that fetches additional
+        location information using the API so I can show I can create a get
+        Location Info function which will show the city and country information
+        the ISS is over.
+      </p>
+
+      <h3 class="sub-heading">Info Box Display:</h3>
+      <p class="post-text">
+        Then I will create a display info box to show the coordinate of the ISS
+        when the user hovers over the ISS or the red dot represented in the art.
+        When they hover over the planet, they can get information on which
+        country it is above in space.
+      </p>
+
+      <h3 class="sub-heading">Continuous Updates:</h3>
+      <p class="post-text">
+        To make sure the red dot represents the ISS is always moving getting
+        real-time data of its position, I set a function to get its data every
+        few minutes so that it will update.
+      </p>
+    </article>
+    <a href="#" class="scroll"><i class="bx bx-up-arrow-alt"></i></a>
+    <footer id="footer"></footer>
+  </body>
+  <script src="../JavaScript/navbar.js"></script>
+  <script src="../JavaScript/footer.js"></script>
+</html>
