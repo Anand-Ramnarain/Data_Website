@@ -171,7 +171,7 @@ const urlCategoryMap = {
     "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
   "data-visual-2":
     "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
-  "data-art":
+  "data-art-1":
     "https://anand-ramnarain.github.io/Data_Website/html/art-main.html",
   "data-art-main":
     "https://anand-ramnarain.github.io/Data_Website/html/art-main.html",
