@@ -165,6 +165,12 @@ const urlCategoryMap = {
     "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
   "data-art":
     "https://anand-ramnarain.github.io/Data_Website/html/data-art.html",
+  "data-art-main":
+    "https://anand-ramnarain.github.io/Data_Website/html/data-art.html",
+  "data-art-redo":
+    "https://anand-ramnarain.github.io/Data_Website/html/data-art.html",
+  "data-art-exam":
+    "https://anand-ramnarain.github.io/Data_Website/html/data-art.html",
 };
 
 document.addEventListener("DOMContentLoaded", function () {
