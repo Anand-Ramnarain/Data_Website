@@ -139,12 +139,15 @@ const urlCategoryMap = {
     "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
   "reflection-post":
     "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  blog3: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  blog4: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  blog5: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "blog3-post":
+    "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "blog4-post":
+    "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  "blog5-post":
+    "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
   "design-main":
     "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  wireframes:
+  "wireframes-design":
     "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "style-guide":
     "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
