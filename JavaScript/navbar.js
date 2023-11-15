@@ -139,12 +139,12 @@ const urlCategoryMap = {
     "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
   "reflection-post":
     "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "blog3": "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "blog4": "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
-  "blog5":"https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  blog3: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  blog4: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
+  blog5: "https://anand-ramnarain.github.io/Data_Website/html/blog-post.html",
   "design-main":
     "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
-  "wireframes":
+  wireframes:
     "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "style-guide":
     "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
@@ -157,6 +157,10 @@ const urlCategoryMap = {
   "as&sol":
     "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "data-art-planning":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "data-art-planning-redo":
+    "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
+  "data-art-planning-exam":
     "https://anand-ramnarain.github.io/Data_Website/html/design-main.html",
   "data-visual-main":
     "https://anand-ramnarain.github.io/Data_Website/html/data-visual-main.html",
